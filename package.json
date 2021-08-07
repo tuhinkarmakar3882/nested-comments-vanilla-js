@@ -1,0 +1,17 @@
+{
+  "name": "loop-comments",
+  "version": "1.0.0",
+  "description": "Machine Coding Round",
+  "main": "index.html",
+  "author": "Me",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

@@ -1,0 +1,93 @@
+main.comments-container {
+    --comment-background: hsl(0, 0%, 94%);
+    --comment-background-dark: hsl(0, 0%, 86%);
+}
+
+.comment {
+    background: var(--comment-background);
+    box-shadow: var(--default-box-shadow);
+    width: clamp(200px, 90vw, 768px);
+    padding: var(--spacing-standard) var(--spacing-micro);
+    margin: 1rem 0;
+    border-radius: var(--spacing-nano) 0;
+}
+
+.comment.nested {
+    width: clamp(
+            calc(200px - 3rem),
+            calc(90vw - 3rem),
+            calc(768px - 3rem)
+    );
+    margin-left: 3rem;
+}
+
+.comment:hover, .comment:focus {
+    background: var(--comment-background-dark);
+    transform: scale(1.01);
+}
+
+.comment main {
+    display: flex;
+    gap: var(--spacing-standard);
+    margin-bottom: 1.5rem;
+}
+
+.comment main img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.comment a {
+    display: block;
+    text-decoration: none;
+    color: hsl(246, 90%, 55%);
+    font-size: 24px;
+    margin-bottom: var(--spacing-micro);
+}
+
+.comment p {
+    font-family: sans-serif;
+    color: hsl(0, 0%, 12%);
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.comment p.votes {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: var(--spacing-nano);
+}
+
+.comment nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-micro);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.comment nav button {
+    flex: 1;
+}
+
+.comment form {
+    display: flex;
+    margin: var(--spacing-standard) 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.comment form button {
+    margin: 0;
+}
+
+.comment input {
+    flex: 1;
+    margin: 0;
+}
